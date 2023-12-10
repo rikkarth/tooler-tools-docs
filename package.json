@@ -7,7 +7,7 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
+    "deploy": "export GIT_USER=rikkarth || set GIT_USER=rikkarth && docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
@@ -22,7 +22,8 @@
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.0.1",
@@ -44,5 +45,9 @@
   },
   "engines": {
     "node": ">=18.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rikkarth/tooler-tools-docs.git"
+}
 }
