@@ -3,46 +3,20 @@ slug: /
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Introduction
 
-Let's discover **Docusaurus in less than 5 minutes**.
+:rocket: Tooler-Tools is a versatile Java library for backend and CLI developers, offering a growing collection of tools to simplify your development tasks.
 
-## Getting Started
+# Tools :hammer_and_wrench:
 
-Get started by **creating a new site**.
+## XmlHandler
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Provides methods for querying and manipulating XML documents using XPath expressions.
 
-### What you'll need
+## EnvPathParser
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Parses and expands environment variables in file paths. Provides static methods for parsing input paths, replacing environment variable placeholders with their respective values on both Windows and Unix-like systems.
 
-## Generate a new site
+## PropertiesLoader
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Loads properties from various sources, such as files and system properties, with support for environment variable expansion in file paths.
