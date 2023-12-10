@@ -8,9 +8,9 @@ Provides methods for querying and manipulating XML documents using XPath express
 
 ## API
 * XmlHandler.[getStringFromXPath](#xmlhandlergetstringfromxpath)
-* XmlHandler.[getNodeListFromXPath]("")
-* XmlHandler.[getNodeFromXPath]("")
-* XmlHandler.[getOptionalDomFromFile]("")
+* XmlHandler.getNodeListFromXPath
+* XmlHandler.getNodeFromXPath
+* XmlHandler.getOptionalDomFromFile
 
 ## Xml Use-Case
 
@@ -28,7 +28,7 @@ Provides methods for querying and manipulating XML documents using XPath express
 </root>
 ```
 
-## XmlHandler.[getStringFromXPath]("")
+## XmlHandler.getStringFromXPath
 
 ```java
 import pt.codeforge.toolertools.xml.XmlHandler;
@@ -45,6 +45,10 @@ class TestClass {
     }
 }
 ```
+#### *Expected Output*
 
+```text
+Test Value
+```
 
 
