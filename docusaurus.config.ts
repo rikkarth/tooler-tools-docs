@@ -96,7 +96,7 @@ const config: Config = {
             },
             {
               label: 'API',
-              to: '/api/tooler-tools',
+              to: '/api/category/tooler-tools',
             },
           ],
         },
