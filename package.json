@@ -7,7 +7,7 @@
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "export GIT_USER=rikkarth || set GIT_USER=rikkarth && docusaurus deploy",
+    "deploy": "export GIT_USER=rikkarth|| set GIT_USER=rikkarth&& docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",

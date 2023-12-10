@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://rikkarth.github.io',
+  url: 'https://www.codeforge.pt',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -68,15 +68,14 @@ const config: Config = {
       },
       items: [
         {
-          type: 'doc',
+          to: '/api/category/tooler-tools',
           position: 'left',
-          docId: 'intro',
-          label: 'Docs',
+          label: 'API',
         },
         {
-          to: '/api/main', 
+          href: 'pathname:///javadoc/',
           position: 'left',
-          label: 'API', 
+          label: 'JavaDoc',
         },
         {
           href: 'https://github.com/rikkarth/tooler-tools',
