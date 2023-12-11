@@ -4,6 +4,8 @@ sidebar_position: 3
 
 # PropertiesLoader
 
+## UNDER CONSTRUCTION - Please Ignore
+
 ## `public class PropertiesLoader`
 
 Utility class for loading properties from various sources, such as files and system properties, with support for environment variable expansion in file paths.

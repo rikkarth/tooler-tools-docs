@@ -91,7 +91,7 @@ const config: Config = {
           title: 'Tooler Tools',
           items: [
             {
-              label: 'Docs',
+              label: 'Home',
               to: '/',
             },
             {
@@ -119,7 +119,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} CodeForge - Tooler-Tools`,
     },
     prism: {
       theme: prismThemes.github,
