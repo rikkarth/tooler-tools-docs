@@ -1,45 +1,109 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: 'Tooler Tools',
-  tagline: 'A versatile Java library for backend and CLI developers, offering a growing collection of tools to simplify your development tasks.',
-  favicon: 'img/favicon.ico',
+  title: "Tooler Tools",
+  tagline:
+    "A versatile Java library for backend and CLI developers, offering a growing collection of tools to simplify your development tasks.",
+  favicon: "img/favicon.ico",
+
+  headTags: [
+    {
+      tagName: "meta",
+      attributes: {
+        name: "description",
+        content:
+          "Tooler-Tools: A versatile Java library for backend and CLI developers, offering a growing collection of tools to simplify your development tasks.",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        name: "keywords",
+        content:
+          "java, lib, library, tooler-tools, tools, tooler, cli, backend, software, code, developer, development, engineering",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "canonical",
+        href: "https://codeforge.pt",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:title",
+        content: "Tooler-Tools",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:description",
+        content:
+          "Tooler-Tools: A versatile Java library for backend and CLI developers, offering a growing collection of tools to simplify your development tasks.",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:url",
+        content:
+          "https://codeforge.pt",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:image",
+        content:"/img/codeForgeImage.jpg",
+      },
+    },
+    {
+      tagName: "meta",
+      attributes: {
+        property: "og:image:alt",
+        content:"Resembling git branching",
+      },
+    },
+  ],
 
   // Set the production url of your site here
-  url: 'https://www.codeforge.pt',
+  url: "https://www.codeforge.pt",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
   trailingSlash: false,
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'rikkarth', // Usually your GitHub org/user name.
-  projectName: 'tooler-tools-docs', // Usually your repo name.
+  organizationName: "rikkarth", // Usually your GitHub org/user name.
+  projectName: "tooler-tools-docs", // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          routeBasePath: '/',
-          sidebarPath: './sidebars.ts',
+          routeBasePath: "/",
+          sidebarPath: "./sidebars.ts",
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
@@ -47,74 +111,74 @@ const config: Config = {
 
   plugins: [
     [
-      '@docusaurus/plugin-content-docs',
+      "@docusaurus/plugin-content-docs",
       {
-        id: 'api',
-        path: 'api',
-        routeBasePath: '/api',
-        sidebarPath: './sidebars.ts',
+        id: "api",
+        path: "api",
+        routeBasePath: "/api",
+        sidebarPath: "./sidebars.ts",
       },
     ],
   ],
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/tooler.svg',
+    image: "img/tooler.svg",
     navbar: {
-      title: 'Tooler Tools',
+      title: "Tooler Tools",
       logo: {
-        alt: 'Tooler Tools Logo',
-        src: 'img/tooler.svg',
+        alt: "Tooler Tools Logo",
+        src: "img/tooler.svg",
       },
       items: [
         {
-          to: '/api/category/tooler-tools',
-          position: 'left',
-          label: 'API',
+          to: "/api/category/tooler-tools",
+          position: "left",
+          label: "API",
         },
         {
-          href: 'pathname:///javadoc/',
-          position: 'left',
-          label: 'JavaDoc',
+          href: "pathname:///javadoc/",
+          position: "left",
+          label: "JavaDoc",
         },
         {
-          href: 'https://github.com/rikkarth/tooler-tools',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/rikkarth/tooler-tools",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Tooler Tools',
+          title: "Tooler Tools",
           items: [
             {
-              label: 'Home',
-              to: '/',
+              label: "Home",
+              to: "/",
             },
             {
-              label: 'API',
-              to: '/api/category/tooler-tools',
-            },
-          ],
-        },
-        {
-          title: 'Contact',
-          items: [
-            {
-              label: 'Email',
-              href: 'mailto:ricardo.mendes@codeforge.pt',
+              label: "API",
+              to: "/api/category/tooler-tools",
             },
           ],
         },
         {
-          title: 'More',
+          title: "Contact",
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/rikkarth/tooler-tools',
+              label: "Email",
+              href: "mailto:ricardo.mendes@codeforge.pt",
+            },
+          ],
+        },
+        {
+          title: "More",
+          items: [
+            {
+              label: "GitHub",
+              href: "https://github.com/rikkarth/tooler-tools",
             },
           ],
         },
