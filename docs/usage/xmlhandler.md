@@ -265,3 +265,25 @@ class TestClass {
 ```text
 is null
 ```
+
+## getOptionalDomFromFile(File) {#getoptionaldomfromfile}
+
+```java
+import pt.codeforge.toolertools.xml.XmlHandler;
+
+class TestClass {
+
+    @Test
+    void test() {
+        Document document = XmlHandler.getOptionalDomFromFile(new File(input)).orElseThrow(IllegalStateException::new);
+
+        System.out.println(document.getFirstChild().getNodeName());
+    }
+}
+```
+
+#### _Expected Output_
+
+```text
+root
+```
