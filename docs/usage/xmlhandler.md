@@ -8,12 +8,13 @@ Provides methods for querying and manipulating XML documents using XPath express
 
 ## API
 
-- XmlHandler.[getStringFromXPath](#xmlhandlergetstringfromxpath)
-- XmlHandler.getNodeListFromXPath
-- XmlHandler.getNodeFromXPath
-- XmlHandler.getOptionalDomFromFile
+- XmlHandler.[getStringFromXPath(String, Document)](#getstringfromxpath)
+- XmlHandler.[getNodeListFromXPath(String, Document)](#getnodelistfromxpath)
+- XmlHandler.[getNodeFromXPath(String, Document)](#getnodefromxpath)
+- XmlHandler.[getNodeFromXPath(String, Document, boolean)](#getnodefromxpathOL)
+- XmlHandler.getOptionalDomFromFile(File file)
 
-## Xml Use-Case
+## Xml Subject
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -29,7 +30,7 @@ Provides methods for querying and manipulating XML documents using XPath express
 </root>
 ```
 
-## XmlHandler.getStringFromXPath
+## getStringFromXPath (String, Document) {#getstringfromxpath}
 
 ### Single Element
 
@@ -55,7 +56,7 @@ class TestClass {
 Test Value
 ```
 
-### Multiple Same Element
+### Multiple Elements
 
 ```java
 import pt.codeforge.toolertools.xml.XmlHandler;
@@ -117,7 +118,7 @@ class TestClass {
 true
 ```
 
-## XmlHandler.getNodeListFromXPath
+## getNodeListFromXPath (String, Document) {#getnodelistfromxpath}
 
 ### Extracting Defined Child Element NodeList From Parent Node
 
@@ -173,4 +174,94 @@ class TestClass {
 0
 0
 0
+```
+
+## getNodeFromXPath (String, Document) {#getnodefromxpath}
+
+### Normal Use Case
+
+```java
+import pt.codeforge.toolertools.xml.XmlHandler;
+
+class TestClass {
+
+    @Test
+    void test() {
+        Document doc = XmlHandler.getOptionalDomFromFile(new File(input)).orElseThrow(IllegalStateException::new);
+
+        Node groupElement = XmlHandler.getNodeFromXPath("//element-group", doc);
+
+        System.out.println(groupElement.getNodeName());
+        System.out.println(groupElement.getChildNodes().getLength());
+    }
+}
+```
+
+#### _Expected Output_
+
+```text
+element-group
+7
+```
+
+#### Why does element-group have 7 child nodes instead of 3?
+
+`getOptionalDomFromFile` doesn't apply any transformation to the Document being parsed and we leave the responsibility of cleaning whitespaces or other node types to you.
+
+### Missing/Wrong/Null Values
+
+```java
+import pt.codeforge.toolertools.xml.XmlHandler;
+
+class TestClass {
+
+    @Test
+    void test() {
+        Document doc = XmlHandler.getOptionalDomFromFile(new File(input)).orElseThrow(IllegalStateException::new);
+
+        Node groupElementMalformed = XmlHandler.getNodeFromXPath(MALFORMED_X_PATH, doc);
+        Node groupElementNullExpression = XmlHandler.getNodeFromXPath(null, doc);
+        Node groupElementNullDoc = XmlHandler.getNodeFromXPath(MALFORMED_X_PATH, null);
+
+        System.out.println(groupElement);
+        System.out.println(groupElement.getNodeName());
+    }
+}
+```
+
+#### _Expected Output_
+
+The returned Node is never null, but will provide several indications that it is a null Node that contains no information - basically, an empty Node.
+
+```text
+[null: null]
+null
+```
+
+## getNodeFromXPath (String, Document, boolean) {#getnodefromxpathOL}
+
+### If 'null' needs to be returned
+
+A boolean flag 'true' or 'false' can be additionally added as a parameter. If true, will return `null` if something goes wrong.
+
+```java
+import pt.codeforge.toolertools.xml.XmlHandler;
+
+class TestClass {
+
+    @Test
+    void test() {
+        Document doc = XmlHandler.getOptionalDomFromFile(new File(input)).orElseThrow(IllegalStateException::new);
+
+        Node nullGroupElement = XmlHandler.getNodeFromXPath(MALFORMED_X_PATH, doc, true);
+
+        System.out.println(nullGroupElement == null ? "is null" : "not null");
+    }
+}
+```
+
+#### _Expected Output_
+
+```text
+is null
 ```
