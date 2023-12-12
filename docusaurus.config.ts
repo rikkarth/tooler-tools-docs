@@ -109,18 +109,6 @@ const config: Config = {
     ],
   ],
 
-  plugins: [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "api",
-        path: "api",
-        routeBasePath: "/api",
-        sidebarPath: "./sidebars.ts",
-      },
-    ],
-  ],
-
   themeConfig: {
     // Replace with your project's social card
     image: "img/tooler.svg",
@@ -131,11 +119,6 @@ const config: Config = {
         src: "img/tooler.svg",
       },
       items: [
-        {
-          to: "/api/category/tooler-tools",
-          position: "left",
-          label: "API",
-        },
         {
           href: "pathname:///javadoc/",
           position: "left",
@@ -157,11 +140,7 @@ const config: Config = {
             {
               label: "Home",
               to: "/",
-            },
-            {
-              label: "API",
-              to: "/api/category/tooler-tools",
-            },
+            }
           ],
         },
         {
