@@ -51,22 +51,21 @@ const config: Config = {
       tagName: "meta",
       attributes: {
         property: "og:url",
-        content:
-          "https://codeforge.pt",
+        content: "https://codeforge.pt",
       },
     },
     {
       tagName: "meta",
       attributes: {
         property: "og:image",
-        content:"/img/codeForgeImage.jpg",
+        content: "/img/codeForgeImage.jpg",
       },
     },
     {
       tagName: "meta",
       attributes: {
         property: "og:image:alt",
-        content:"Resembling git branching",
+        content: "Resembling git branching",
       },
     },
   ],
@@ -110,7 +109,12 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
+
     image: "img/tooler.svg",
     navbar: {
       title: "Tooler Tools",
@@ -140,7 +144,7 @@ const config: Config = {
             {
               label: "Home",
               to: "/",
-            }
+            },
           ],
         },
         {
