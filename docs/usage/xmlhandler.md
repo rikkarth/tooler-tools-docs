@@ -6,13 +6,16 @@ sidebar_position: 1
 
 Provides methods for querying and manipulating XML documents using XPath expressions.
 
+:::info Check <a href="../javadoc/" target="_blank">JavaDoc</a>  for detailed info
+:::
+
 ## API
 
-- XmlHandler.[getStringFromXPath(String, Document)](#getstringfromxpath)
-- XmlHandler.[getNodeListFromXPath(String, Document)](#getnodelistfromxpath)
-- XmlHandler.[getNodeFromXPath(String, Document)](#getnodefromxpath)
-- XmlHandler.[getNodeFromXPath(String, Document, boolean)](#getnodefromxpathOL)
-- XmlHandler.getOptionalDomFromFile(File file)
+- **String** [getStringFromXPath (String, Document)](#getstringfromxpath)
+- **NodeList** [getNodeListFromXPath (String, Document)](#getnodelistfromxpath)
+- **Node** [getNodeFromXPath (String, Document)](#getnodefromxpath)
+- **Node** [getNodeFromXPath (String, Document, boolean)](#getnodefromxpathOL)
+- **Optional`<Document>`** [getOptionalDomFromFile (File file)](#getoptionaldomfromfile)
 
 ## Xml Subject
 
