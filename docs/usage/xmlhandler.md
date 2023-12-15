@@ -6,16 +6,16 @@ sidebar_position: 1
 
 Provides methods for querying and manipulating XML documents using XPath expressions.
 
-:::info Check <a href="../javadoc/" target="_blank">JavaDoc</a>  for detailed info
+:::info <a href="../javadoc/" target="_blank">JavaDoc</a> for more details
 :::
 
 ## API
 
-- **String** [getStringFromXPath (String, Document)](#getstringfromxpath)
-- **NodeList** [getNodeListFromXPath (String, Document)](#getnodelistfromxpath)
-- **Node** [getNodeFromXPath (String, Document)](#getnodefromxpath)
-- **Node** [getNodeFromXPath (String, Document, boolean)](#getnodefromxpathOL)
-- **Optional`<Document>`** [getOptionalDomFromFile (File file)](#getoptionaldomfromfile)
+- **String** [getStringFromXPath (String, Document)](#getStringFromXPath)
+- **NodeList** [getNodeListFromXPath (String, Document)](#getNodeListFromXPath)
+- **Node** [getNodeFromXPath (String, Document)](#getNodeFromXPath)
+- **Node** [getNodeFromXPath (String, Document, boolean)](#getNodeFromXPathOverloaded)
+- **Optional`<Document>`** [getOptionalDomFromFile (File file)](#getOptionalDomFromFile)
 
 ## Xml Subject
 
@@ -33,9 +33,9 @@ Provides methods for querying and manipulating XML documents using XPath express
 </root>
 ```
 
-## getStringFromXPath (String, Document) {#getstringfromxpath}
+## getStringFromXPath (String, Document) {#getStringFromXPath}
 
-### Single Element
+**Single Element**
 
 ```java
 import pt.codeforge.toolertools.xml.XmlHandler;
@@ -59,7 +59,7 @@ class TestClass {
 Test Value
 ```
 
-### Multiple Elements
+**Multiple Elements**
 
 ```java
 import pt.codeforge.toolertools.xml.XmlHandler;
@@ -97,7 +97,7 @@ Item 2
 Item 3
 ```
 
-### Wrong/Missing/Null Element
+**Wrong/Missing/Null Element**
 
 ```java
 import pt.codeforge.toolertools.xml.XmlHandler;
@@ -121,9 +121,9 @@ class TestClass {
 true
 ```
 
-## getNodeListFromXPath (String, Document) {#getnodelistfromxpath}
+## getNodeListFromXPath (String, Document) {#getNodeListFromXPath}
 
-### Extracting Defined Child Element NodeList From Parent Node
+**Extracting Defined Child Element NodeList From Parent Node**
 
 ```java
 import pt.codeforge.toolertools.xml.XmlHandler;
@@ -147,7 +147,7 @@ class TestClass {
 3
 ```
 
-### Wrong/Missing/Null Elements
+**Wrong/Missing/Null Elements**
 
 ```java
 import pt.codeforge.toolertools.xml.XmlHandler;
@@ -179,9 +179,9 @@ class TestClass {
 0
 ```
 
-## getNodeFromXPath (String, Document) {#getnodefromxpath}
+## getNodeFromXPath (String, Document) {#getNodeFromXPath}
 
-### Normal Use Case
+**Normal Use Case**
 
 ```java
 import pt.codeforge.toolertools.xml.XmlHandler;
@@ -207,11 +207,11 @@ element-group
 7
 ```
 
-#### Why does element-group have 7 child nodes instead of 3?
+**Why does element-group have 7 child nodes instead of 3?**
 
 `getOptionalDomFromFile` doesn't apply any transformation to the Document being parsed and we leave the responsibility of cleaning whitespaces or other node types to you.
 
-### Missing/Wrong/Null Values
+**Missing/Wrong/Null Values**
 
 ```java
 import pt.codeforge.toolertools.xml.XmlHandler;
@@ -241,9 +241,9 @@ The returned Node is never null, but will provide several indications that it is
 null
 ```
 
-## getNodeFromXPath (String, Document, boolean) {#getnodefromxpathOL}
+## getNodeFromXPath (String, Document, boolean) {#getNodeFromXPathOverloaded}
 
-### If 'null' needs to be returned
+**If 'null' needs to be returned**
 
 A boolean flag 'true' or 'false' can be additionally added as a parameter. If true, will return `null` if something goes wrong.
 
@@ -269,7 +269,7 @@ class TestClass {
 is null
 ```
 
-## getOptionalDomFromFile(File) {#getoptionaldomfromfile}
+## getOptionalDomFromFile(File) {#getOptionalDomFromFile}
 
 ```java
 import pt.codeforge.toolertools.xml.XmlHandler;
