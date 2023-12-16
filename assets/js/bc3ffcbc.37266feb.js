@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunktooler_tools_docs=self.webpackChunktooler_tools_docs||[]).push([[868],{6433:e=>{e.exports=JSON.parse('{"title":"Usage","slug":"/category/usage","permalink":"/category/usage","navigation":{"previous":{"title":"Introduction","permalink":"/"},"next":{"title":"XmlHandler","permalink":"/usage/xmlhandler"}}}')}}]);
