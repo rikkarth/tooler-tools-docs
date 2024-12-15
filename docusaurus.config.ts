@@ -29,7 +29,7 @@ const config: Config = {
       tagName: "link",
       attributes: {
         rel: "canonical",
-        href: "https://codeforge.pt",
+        href: "https://streambit.dev/tooler-tools",
       },
     },
     {
@@ -51,7 +51,7 @@ const config: Config = {
       tagName: "meta",
       attributes: {
         property: "og:url",
-        content: "https://codeforge.pt",
+        content: "https://streambit.dev/tooler-tools",
       },
     },
     {
@@ -71,7 +71,7 @@ const config: Config = {
   ],
 
   // Set the production url of your site here
-  url: "https://www.codeforge.pt",
+  url: "https://www.streambit.dev/tooler-tools",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -152,7 +152,7 @@ const config: Config = {
           items: [
             {
               label: "Email",
-              href: "mailto:ricardo.mendes@codeforge.pt",
+              href: "mailto:ricardo.mendes@streambit.dev",
             },
           ],
         },
@@ -166,7 +166,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} CodeForge - Tooler-Tools`,
+      copyright: `Copyright © ${new Date().getFullYear()} StreamBit - Tooler-Tools`,
     },
     prism: {
       theme: prismThemes.github,
