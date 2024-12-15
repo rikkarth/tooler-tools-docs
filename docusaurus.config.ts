@@ -29,7 +29,7 @@ const config: Config = {
       tagName: "link",
       attributes: {
         rel: "canonical",
-        href: "https://streambit.dev/tooler-tools",
+        href: "https://github.com/rikkarth/tooler-tools",
       },
     },
     {
@@ -71,7 +71,7 @@ const config: Config = {
   ],
 
   // Set the production url of your site here
-  url: "https://www.streambit.dev/tooler-tools",
+  url: "https://github.com/rikkarth/tooler-tools",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -97,7 +97,7 @@ const config: Config = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          routeBasePath: "/",
+          routeBasePath: "/tooler-tools",
           sidebarPath: "./sidebars.ts",
         },
         blog: false,
